@@ -4,7 +4,7 @@ package com.delirium.restserver.model;
  * Created by morand3 on 7/24/2016.
  */
 public class Circle extends Shape {
-    private Double radius;
+    private double radius;
 
     public Circle() {
         super("Circle");

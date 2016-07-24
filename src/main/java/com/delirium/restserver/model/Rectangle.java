@@ -3,12 +3,16 @@ package com.delirium.restserver.model;
 /**
  * Created by morand3 on 7/24/2016.
  */
-public class Rectengale extends Shape {
+public class Rectangle extends Shape {
     private Double length;
     private Double width;
 
-    public Rectengale() {
-        super("Rectengale");
+    public Rectangle() {
+        super("Rectangle");
+    }
+
+    public Rectangle(String name) {
+        super(name);
     }
 
     @Override

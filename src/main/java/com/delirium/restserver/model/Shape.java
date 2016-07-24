@@ -1,10 +1,13 @@
 package com.delirium.restserver.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME)
-@JsonSubTypes(value = {@JsonSubTypes.Type(Rectengale.class), @JsonSubTypes.Type(Circle.class)})
+@JsonSubTypes(value = {@JsonSubTypes.Type(Rectangle.class),
+        @JsonSubTypes.Type(Circle.class),
+        @JsonSubTypes.Type(Square.class)})
 public abstract class Shape {
     private Long id;
     private String name;
@@ -33,6 +36,7 @@ public abstract class Shape {
         this.name = name;
     }
 
+    @JsonProperty
     public abstract Double area();
 
 }
